@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: service-tenant-prueba
+  config:
+    enabled: true
+    import: configserver:https://service-config.azurewebsites.net
+  cloud:
+    config:
+      username: ${EUR_USER}
+      password: ${EUR_PASS}

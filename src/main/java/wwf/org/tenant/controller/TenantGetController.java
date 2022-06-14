@@ -9,7 +9,7 @@ import wwf.org.tenant.service.TenantService;
 
 import java.util.List;
 
-@CrossOrigin(origins = {"${settings.cors_origin}"}, maxAge = 3600,
+@CrossOrigin(origins = {"${settings.cors_origin}", "${settings.cors_origin_pro}"}, maxAge = 3600,
         allowedHeaders={"Origin", "X-Requested-With", "Content-Type", "Accept", "x-client-key", "x-client-token", "x-client-secret", "Authorization"}, methods = {RequestMethod.GET, RequestMethod.POST, RequestMethod.OPTIONS, RequestMethod.HEAD, RequestMethod.DELETE, RequestMethod.PUT})
 @RestController
 @RequestMapping(value="/tenants")

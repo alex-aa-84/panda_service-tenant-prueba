@@ -34,7 +34,7 @@ public class TenantModuleServiceImpl implements TenantModuleService{
         tenantModule.setStatus("CREATED");
         tenantModule.setCreation_date(new Date());
         tenantModule.setLast_update_date(new Date());
-        String md5 = MD5Util.string2MD5((tenantModule.getTenant().getId()+tenantModule.getModule().getId()) + "tnMd");
+        String md5 = MD5Util.string2MD5(tenantModule.getTenant().getId().toString()+tenantModule.getModule().getId().toString() + "tnMd");
         tenantModule.setCtrlMd5(md5);
         return tenantModuleRepository.save(tenantModule);
     }
